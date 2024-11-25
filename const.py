@@ -1,7 +1,7 @@
 import logging
 
 # Will auto-update based on GitHub release tag
-VERSION = "v0.3.1"
+VERSION = "v0.5.0"
 
 CONF_YAML = "juicepassproxy.yaml"
 
@@ -20,7 +20,8 @@ DEFAULT_MQTT_HOST = "127.0.0.1"
 DEFAULT_MQTT_PORT = "1883"
 DEFAULT_MQTT_DISCOVERY_PREFIX = "homeassistant"
 DEFAULT_DEVICE_NAME = "JuiceBox"
-DEFAULT_TELNET_TIMEOUT = 30
+DEFAULT_TELNET_PORT = "2000"
+DEFAULT_TELNET_TIMEOUT = "30"
 
 # How many times to fully restart JPP before exiting
 MAX_JPP_LOOP = 10

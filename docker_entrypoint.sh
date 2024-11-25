@@ -73,7 +73,12 @@ if [[ ! -z "${TELNET_TIMEOUT}" ]]; then
   JPP_STRING+=" --telnet_timeout ${TELNET_TIMEOUT}"
 fi
 JPP_STRING+=" --config_loc /config"
-JPP_STRING+=" --log_loc /log"
+if [[ -v LOG_LOC ]]; then
+  logger INFO "LOG_LOC: ${LOG_LOC}"
+  JPP_STRING+=" --log_loc ${LOG_LOC}"
+else
+  JPP_STRING+=" --log_loc /log"
+fi   
 logger INFO "DEBUG: ${DEBUG}"
 if $DEBUG; then
   JPP_STRING+=" --debug"
